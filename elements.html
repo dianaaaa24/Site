@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Fond de vânătoare</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">Despre noi</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">Despre noi</a></li>
+                <li><a href="cabana.html"> Cabana</a></li>
+                <li><a href="vanatoare.html"> Vanatoare</a></li>
+                <li class="active"><a href="elements.html"> Contact</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.facebook.com" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+            </ul>
+        </nav>
+
+       
+        <!-- Footer -->
+        <footer id="footer">
+            <section>
+                <section class="post">
+                    <!-- Row 1 -->
+                    
+                </section>
+                <!-- Map Container -->
+                <h2>Locația noastră</h2>
+                <div id="map" style="height: 400px; width: 100%;"></div>
+            </section>
+            <section class="split contact">
+                <section class="alt">
+                    <h3>Adresă</h3>
+                    <p>Pădurea Pojorâtele, Teleorman</p>
+                </section>
+                <section>
+                    <h3>Telefon</h3>
+                    <p><a href="#">0727767328</a></p>
+                </section>
+                <section>
+                    <h3>Email</h3>
+                    <p><a href="#">stefpredoi@yahoo.com</a></p>
+                </section>
+                <section>
+                    <h3>Social</h3>
+                    <ul class="icons alt">
+                        <li><a href="https://www.facebook.com/profile.php?id=61565455929285" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+                    </ul>
+                </section>
+            </section>
+        </footer>
+
+        <div id="copyright">
+            <ul><li> Cabana</li><li>0727767328</a></li></ul>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map and set its view to your desired coordinates and zoom level
+        var map = L.map('map').setView([44.15170, 25.05700], 13); // Updated coordinates
+    
+        // Add the OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+    
+        // Add a marker to the map
+        L.marker([44.15170, 25.05700]).addTo(map)
+            .bindPopup('Locația Fondului de vânătoare.')
+            .openPopup();
+    </script>
+    
+
+</body>
+</html>
